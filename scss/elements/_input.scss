@@ -1,0 +1,38 @@
+$input-height: 3rem;
+$input-padding: 0 1.25rem;
+$input-border-radius: 5px;
+$input-border-color: #c9c9c9;
+$input-background-color: #ffffff;
+$input-text-color: #333333;
+$input-border-color-focus: #c9c9c9;
+$input-shadow: 0px 0px 0px 5px rgba(150, 150, 150, 0.1);
+
+.input {
+	width: 100%;
+	height: $input-height;
+	padding: $input-padding;
+
+	border: none;
+	outline: none; // resets default browser style for inputs
+
+	box-sizing: border-box;
+	border-radius: $input-border-radius;
+	border: solid 1px $input-border-color;
+	border-bottom: solid 4px $input-border-color;
+
+	opacity: 0.8;
+	background-color: $input-background-color;
+	color: $input-text-color;
+
+	transition: all 0.3s;
+}
+
+.input:hover {
+	opacity: 1;
+}
+
+.input:focus {
+	opacity: 1;
+	border-bottom: solid 4px $input-border-color-focus;
+	box-shadow: $input-shadow;
+}
