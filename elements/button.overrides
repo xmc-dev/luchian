@@ -1,0 +1,167 @@
+/*--- White ---*/
+.ui.white.buttons .button,
+.ui.white.button {
+  background-color: #FFFFFF;
+  color: @textColor;
+  text-shadow: @textShadow;
+  background-image: @coloredBackgroundImage;
+}
+.ui.white.button {
+  box-shadow: @boxShadow;
+}
+.ui.white.buttons .button:hover,
+.ui.white.button:hover {
+  background-color: @whiteHover;
+  color: @textColor;
+  text-shadow: @textShadow;
+}
+.ui.white.buttons .button:focus,
+.ui.white.button:focus {
+  background-color: @whiteFocus;
+  color: @textColor;
+  text-shadow: @textShadow;
+}
+.ui.white.buttons .button:active,
+.ui.white.button:active {
+  background-color: @whiteDown;
+  color: @textColor;
+  text-shadow: @textShadow;
+}
+.ui.white.buttons .active.button,
+.ui.white.buttons .active.button:active,
+.ui.white.active.button,
+.ui.white.button .active.button:active {
+  background-color: @whiteActive;
+  color: @textColor;
+  text-shadow: @textShadow;
+}
+
+.ui.tall.buttons .button,
+.ui.tall.button {
+  min-height: 3em;
+}
+
+.ui.wide.buttons .button,
+.ui.wide.button {
+  min-width: 10em;
+}
+
+/*--- Raised ---*/
+.ui.raised.buttons .button,
+.ui.raised.button {
+  box-shadow: @defaultRaisedBoxShadow, @defaultRaisedAccentShadow;
+  &.primary {
+    .accentShadow(@defaultRaisedBoxShadow, lighten(@primaryColor, 10%));
+  }
+  &.green, &.positive {
+    .accentShadow(@defaultRaisedBoxShadow, lighten(@green, 10%));
+  }
+  &.red, &.negative {
+    .accentShadow(@defaultRaisedBoxShadow, lighten(@red, 10%));
+  }
+}
+.ui.raised.buttons .button:hover,
+.ui.raised.button:hover {
+  box-shadow: @hoverRaisedBoxShadow, @defaultRaisedAccentShadow;
+  &.primary {
+    .accentShadow(@hoverRaisedBoxShadow, lighten(@primaryColor, 10%));
+  }
+  &.green, &.positive {
+    .accentShadow(@hoverRaisedBoxShadow, lighten(@green, 10%));
+  }
+  &.red, &.negative {
+    .accentShadow(@hoverRaisedBoxShadow, lighten(@red, 10%));
+  }
+}
+.ui.raised.buttons .button:focus,
+.ui.raised.button:focus {
+  box-shadow: @focusRaisedBoxShadow, @defaultRaisedAccentShadow;
+  &.primary {
+    .accentShadow(@focusRaisedBoxShadow, lighten(@primaryColor, 10%));
+  }
+  &.green, &.positive {
+    .accentShadow(@focusRaisedBoxShadow, lighten(@green, 10%));
+  }
+  &.red, &.negative {
+    .accentShadow(@focusRaisedBoxShadow, lighten(@red, 10%));
+  }
+}
+.ui.raised.buttons .button:active,
+.ui.raised.button:active {
+  box-shadow: @downRaisedBoxShadow, @defaultRaisedAccentShadow;
+  &.primary {
+    .accentShadow(@downRaisedBoxShadow, lighten(@primaryColor, 10%), 8px);
+  }
+  &.green, &.positive {
+    .accentShadow(@downRaisedBoxShadow, lighten(@green, 10%), 8px);
+  }
+  &.red, &.negative {
+    .accentShadow(@downRaisedBoxShadow, lighten(@red, 10%), 8px);
+  }
+  transform: scale(0.98) translateY(1px);
+}
+.ui.raised.buttons .active.button,
+.ui.raised.buttons .active.button:active,
+.ui.raised.active.button,
+.ui.raised.button .active.button:active {
+  box-shadow: @activeRaisedBoxShadow, @defaultRaisedAccentShadow;
+  &.primary {
+    .accentShadow(@activeRaisedBoxShadow, lighten(@primaryColor, 10%), 8px);
+  }
+  &.green, &.positive {
+    .accentShadow(@activeRaisedBoxShadow, lighten(@green, 10%), 8px);
+  }
+  &.red, &.negative {
+    .accentShadow(@activeRaisedBoxShadow, lighten(@red, 10%), 8px);
+  }
+}
+
+.ui.raised.button.full {
+  box-shadow: @defaultRaisedBoxShadow!important;
+  &:hover {
+    box-shadow: @hoverRaisedBoxShadow!important;
+  }
+  &:focus {
+    box-shadow: @focusRaisedBoxShadow!important;
+  }
+  &:active {
+    box-shadow: @downRaisedBoxShadow!important;
+  }
+}
+
+/*--- Green Raised ---*//*
+.ui.green.raised.buttons .button,
+.ui.green.raised.button,
+.ui.positive.raised.buttons .button,
+.ui.positive.raised.button {
+  &.green { box-shadow: none; }
+}
+.ui.green.raised.button,
+.ui.positive.raised.button {
+  &.green { box-shadow: none; }
+}
+.ui.green.raised.buttons .button:hover,
+.ui.green.raised.button:hover,
+.ui.positive.raised.buttons .button:hover,
+.ui.positive.raised.button:hover {
+  box-shadow: @hoverRaisedBoxShadow, @greenRaisedAccentShadow;
+}
+.ui.green.raised.buttons .button:focus,
+.ui.green.raised.button:focus,
+.ui.positive.raised.buttons .button:focus,
+.ui.positive.raised.button:focus {
+  box-shadow: @focusRaisedBoxShadow, @greenRaisedAccentShadow;
+}
+.ui.green.raised.buttons .button:active,
+.ui.green.raised.button:active,
+.ui.positive.raised.buttons .button:active,
+.ui.positive.raised.button:active {
+  box-shadow: @downRaisedBoxShadow, @greenRaisedAccentShadow;
+  transform: scale(0.98) translateY(1px);
+}
+.ui.green.raised.buttons .active.button,
+.ui.green.raised.buttons .active.button:active,
+.ui.green.raised.active.button,
+.ui.green.raised.button .active.button:active {
+  box-shadow: @activeRaisedBoxShadow, @greenRaisedAccentShadow;
+}*/
