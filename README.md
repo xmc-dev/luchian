@@ -1,4 +1,4 @@
-# Luchian
+# Luchian :paintbrush:
 
 ## [A Webpainter](https://commons.wikimedia.org/wiki/File:Luchian_-_Un_zugrav.jpg)
 
