@@ -1,3 +1,223 @@
 /*******************************
-        Global Overrides
+  Global Overrides
 *******************************/
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+.luchian {
+  .navigation {
+    height: 100%;
+    width: 6em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    background-color: #333;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .navigation .hamburger {
+    display: none;
+    z-index: 10;
+
+    order: 1;
+  }
+  .navigation .logo {
+    width: 100%;
+    padding: 2em 2em 8em 2em;
+    z-index: 1;
+    background: #333333;
+
+    order: 2;
+  }
+  .navigation .logo img {
+    width: 2em;
+  }
+  .navigation .section {
+    width: 6em;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+
+    order: 3;
+  }
+  .navigation .section#bottom {
+    margin-top: auto;
+    justify-content: flex-end;
+    z-index: 10;
+
+    order: 4;
+  }
+
+  .navigation .section a {
+    display: block;
+
+    width: 6em;
+    height: 6em;
+    padding: 1.125em;
+
+    color: white;
+    transition: all 0.1s;
+  }
+  .navigation .section a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  .navigation .section a span {
+    display: block;
+    font-size: 0.75em;
+  }
+  .navigation .section a.active {
+    background: #239572;
+    width: 6.5em;
+    transition: all 0.2s;
+    box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.15), 0px 16px 16px -16px rgba(45, 190, 146, 0.75);
+  }
+
+  @media only screen and (max-device-width : 640px) , (max-device-height : 640px) {
+    .navigation {
+      width: 100%;
+      height: auto;
+      z-index: 100;
+      -webkit-tap-highlight-color: rgba(34, 148, 114, 0.2);
+      flex-direction: row;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .navigation .hamburger {
+      display: block;
+      text-align: left;
+      height: 4em;
+
+      order: 1;
+    }
+    .navigation .logo {
+      position: absolute;
+      padding: 1em;
+      height: 4em;
+
+      order: 2;
+    }
+    .navigation .section {
+      width: 100%;
+      flex-direction: row;
+      flex: 0 0 100%;
+      transition: 0.2s all;
+      transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      overflow-x: auto;
+
+      order: 4;
+    }
+    .navigation .section.hidden {
+      position: absolute;
+      transform: translate(0, -12em);
+    }
+    .navigation .section#bottom {
+      width: initial;
+      flex-basis: auto;
+      height: 4em;
+      order: 3;
+    }
+
+    .navigation .section a {
+      transition: all 0.2s;
+      flex: 0 0 6em;
+    }
+    .navigation .section a.active {
+      width: 6em;
+      transition: all 0.3s;
+    }
+
+    .navigation .section#bottom a {
+      width: 4em;
+      flex: 0 0 4em;
+      height: 4em;
+      padding: 1em;
+    }
+    .navigation .section#bottom a.active {
+      width: 4em;
+    }
+    .navigation .section#bottom a span {
+      display: none;
+    }
+
+    .navigation .hamburger a {
+      display: block;
+
+      width: 4em;
+      height: 4em;
+      padding: 1em;
+
+      color: white;
+      transition: all 0.1s;
+    }
+    .navigation .hamburger a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+  }
+
+  /*@media only screen and (max-device-height : 515px) {
+    #navigation a {
+      height: 4em;
+      padding: 1em;
+    }
+  }*/
+
+  &.info {
+    &.group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: row;
+    }
+    &.group .item {
+      text-align: center;
+      padding: 0 0.5em;
+    }
+    &.group .item .label {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #aaa;
+    }
+  }
+
+  &.header {
+    & {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    
+      min-height: 6em;
+      background: #fff;
+    
+      margin-bottom: 2em;
+    
+      border-bottom: 1px solid #eee;
+    }
+    .left {
+      flex: 1 0 16em;
+      padding: 1.5em 2em;
+
+      .subtitle {
+        color: #aaa;
+      }
+    }
+    .right {
+      padding: 1.5em 2em;
+    }
+    .content {
+      flex: 0 0 100%;
+      padding: 1.5em 2em;
+    }
+  }
+}

@@ -9,8 +9,8 @@
 @fontName          : 'Lato';
 @fontSmoothing     : antialiased;
 
-@headerFont        : -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-@pageFont          : -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+@headerFont        : -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+@pageFont          : -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
 
 @googleFontName    : @fontName;
 @importGoogleFonts : false;
@@ -38,8 +38,8 @@
 /* See Power-user section below
    for explanation of @px variables
 */
-@relativeBorderRadius: 0;
-@absoluteBorderRadius: 0;
+@relativeBorderRadius: @relative2px;
+@absoluteBorderRadius: @2px;
 
 @defaultBorderRadius: @relativeBorderRadius;
 
@@ -462,24 +462,25 @@
       Borders
 --------------------*/
 
+@solidInternalBorderColor  : #FFFFFF;
+@solidBorderColor          : #FFFFFF;
+@solidSelectedBorderColor  : #FFFFFF;
+
+
+@solidWhiteBorderColor         : #FFFFFF;
+@selectedSolidWhiteBorderColor : #FFFFFF;
+
 @circularRadius                : 500rem;
 
-@borderColor               : rgba(34, 36, 38, 0.15);
-@strongBorderColor         : rgba(34, 36, 38, 0.22);
-@internalBorderColor       : rgba(34, 36, 38, 0.1);
-@selectedBorderColor       : rgba(34, 36, 38, 0.35);
-@strongSelectedBorderColor : rgba(34, 36, 38, 0.5);
-@disabledBorderColor       : rgba(34, 36, 38, 0.5);
+@borderColor               : none;
+@strongBorderColor         : none;
+@internalBorderColor       : none;
+@selectedBorderColor       : none;
+@strongSelectedBorderColor : none;
+@disabledBorderColor       : none;
 
-@solidInternalBorderColor  : #FAFAFA;
-@solidBorderColor          : #D4D4D5;
-@solidSelectedBorderColor  : #BCBDBD;
-
-@whiteBorderColor              : rgba(255, 255, 255, 0.1);
-@selectedWhiteBorderColor      : rgba(255, 255, 255, 0.8);
-
-@solidWhiteBorderColor         : #555555;
-@selectedSolidWhiteBorderColor : #999999;
+@whiteBorderColor              : none;
+@selectedWhiteBorderColor      : none;
 
 
 /*-------------------

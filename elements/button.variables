@@ -107,7 +107,8 @@
 @hoverBackgroundImage: @backgroundImage;
 @hoverBoxShadow: @boxShadow;
 @hoverColor: @hoveredTextColor;
-@hoverRaisedBoxShadow: 0px 3px 16px rgba(0, 0, 0, 0.3);
+//@hoverRaisedBoxShadow: 0px 3px 16px rgba(0, 0, 0, 0.3);
+@hoverRaisedBoxShadow: @defaultRaisedBoxShadow;
 @iconHoverOpacity: 0.85;
 
 /* Focused */
