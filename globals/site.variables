@@ -311,6 +311,7 @@
 @transparentBlack           : rgba(0, 0, 0, 0.05);
 @strongTransparentBlack     : rgba(0, 0, 0, 0.10);
 @veryStrongTransparentBlack : rgba(0, 0, 0, 0.15);
+@strongestTransparentBlack  : rgba(0, 0, 0, 0.25);
 
 @subtleTransparentWhite     : rgba(255, 255, 255, 0.02);
 @transparentWhite           : rgba(255, 255, 255, 0.08);
@@ -325,11 +326,10 @@
 
 /* Differentiating Layers */
 @subtleShadow:
-  0px 1px 2px 0 @borderColor
+  0px 3px 9px 0px @transparentBlack
 ;
 @floatingShadow:
-  0px 2px 4px 0px rgba(34, 36, 38, 0.12),
-  0px 2px 10px 0px rgba(34, 36, 38, 0.15)
+  0px 3px 9px 0px @veryStrongTransparentBlack
 ;
 
 /*******************************

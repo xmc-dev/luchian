@@ -1,0 +1,25 @@
+/*******************************
+         Theme Overrides
+*******************************/
+
+.luchian {
+  &.square {
+    width: @squareSize !important;
+    height: @squareSize;
+  }
+  &.centered-content {
+    text-align: center;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  &.gray-description .content .description {
+    color: #aaa !important;
+  }
+  &.press-animation:active {
+    transform: translateY(1px) scale(0.98) !important;
+    box-shadow: @shadowActiveBoxShadow !important;
+  }
+}
