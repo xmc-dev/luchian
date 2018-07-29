@@ -292,4 +292,19 @@
       margin: 0 !important;
     }
   }
+
+  &.round-small-icon {
+    display: inline-block;
+    overflow: visible;
+    width: 3em;
+    padding: 0.75em;
+  }
+  &.high-dropdown .menu {
+    height: auto !important;
+    background: #555 !important;
+    color: white !important;
+    .item {
+      color: white !important;
+    }
+  }
 }
