@@ -71,7 +71,7 @@
     }
   
     .section {
-      width: 3em;
+      width: 16em;
       display: flex;
       flex-basis: 100%;
       flex-direction: column;
@@ -127,7 +127,6 @@
         
         &.active {
           background: #239572;
-
           &:hover {
             background: #2cbe92;
             box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.15), 0px 16px 16px -16px rgba(45, 190, 146, 0.75);
@@ -154,7 +153,7 @@
       }
     }
     &.extended {
-      width: 16em;
+      width: 16em !important;
       .section a {
         width: 16em !important;
         span {
